@@ -1,5 +1,6 @@
 package ru.neoflex.education;
 
+import org.camunda.bpm.engine.delegate.BpmnError;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
 import org.springframework.stereotype.Component;
@@ -17,9 +18,17 @@ public class PrepareToBattle implements JavaDelegate {
 
         if ((warriors - enemyWarriors) > 0) {
             isWin = true;
+
             battleStatus = "Victory!";
+
         } else {
             battleStatus = "Fail :(";
+
+        }
+
+
+        if (warriors < 1 || warriors > 100) {
+            throw new BpmnError("warriorsError");
         }
 
 
