@@ -26,7 +26,7 @@ public class PrepareToBattle implements JavaDelegate {
         if (warriors < 1 || warriors > maxWarriors) {
             throw new BpmnError("warriorsError");
         }
-        List army = new ArrayList<>(Collections.nCopies(warriors, true));
+        List<Boolean> army = new ArrayList<>(Collections.nCopies(warriors, true));
         System.out.println("Prepare to battle! Enemy army: " + enemyWarriors + " vs. our army: " + warriors);
         delegateExecution.setVariable("army", army);
         delegateExecution.setVariable("enemyWarriors", enemyWarriors);

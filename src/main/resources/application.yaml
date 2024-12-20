@@ -3,3 +3,4 @@ maxWarriors: 100
 camunda.bpm.admin-user:
   id: demo
   password: demo
+camunda.bpm.default-serialization-format: application/json
