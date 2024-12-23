@@ -4,3 +4,4 @@ camunda.bpm.admin-user:
   id: demo
   password: demo
 camunda.bpm.default-serialization-format: application/json
+url: https://randomuser.me/api/?inc=name&noinfo
