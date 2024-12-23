@@ -3,10 +3,8 @@ package ru.neoflex.education;
 import org.camunda.bpm.engine.delegate.BpmnError;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
-import org.camunda.bpm.engine.variable.value.ObjectValue;
 import org.springframework.stereotype.Component;
 import static org.camunda.spin.Spin.JSON;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 

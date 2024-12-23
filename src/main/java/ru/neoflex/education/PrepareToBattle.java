@@ -7,7 +7,6 @@ import org.camunda.connect.Connectors;
 import org.camunda.connect.httpclient.HttpConnector;
 import org.camunda.connect.httpclient.HttpRequest;
 import org.camunda.connect.httpclient.HttpResponse;
-import org.camunda.spin.SpinList;
 import org.camunda.spin.json.SpinJsonNode;
 import org.springframework.stereotype.Component;
 import org.springframework.beans.factory.annotation.Value;
@@ -32,7 +31,7 @@ public class PrepareToBattle implements JavaDelegate {
     public void execute(DelegateExecution delegateExecution) throws Exception {
         int warriors = (int) delegateExecution.getVariable("warriors");
         int enemyWarriors = (int) (Math.random() * 100);
-        boolean isWin = false;
+        boolean isWin;
         maxWarriors = maxWarriors == 0 ? 100 : maxWarriors;
         if (warriors < 1 || warriors > maxWarriors) {
             throw new BpmnError("warriorsError");
