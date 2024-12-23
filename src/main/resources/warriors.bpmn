@@ -85,14 +85,6 @@
       <bpmn:incoming>Flow_1rsdpgu</bpmn:incoming>
       <bpmn:outgoing>Flow_0fj8y74</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:subProcess id="Activity_0hrszmd" triggeredByEvent="true">
-      <bpmn:endEvent id="Event_1tf3bl3">
-        <bpmn:errorEventDefinition id="ErrorEventDefinition_1sv47r6" errorRef="Error_1qzzamd" />
-      </bpmn:endEvent>
-      <bpmn:startEvent id="Event_0amyfk7">
-        <bpmn:errorEventDefinition id="ErrorEventDefinition_0coz3yl" errorRef="Error_04q1e4c" />
-      </bpmn:startEvent>
-    </bpmn:subProcess>
     <bpmn:serviceTask id="Activity_1yxeydp" name="Fight the enemy" camunda:delegateExpression="${fightEnemy}">
       <bpmn:extensionElements />
       <bpmn:incoming>Flow_0fj8y74</bpmn:incoming>
@@ -194,18 +186,6 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_1s6csde_di" bpmnElement="Gateway_1s6csde" isMarkerVisible="true">
         <dc:Bounds x="655" y="85" width="50" height="50" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0b1s5i5_di" bpmnElement="Activity_0hrszmd" isExpanded="true">
-        <dc:Bounds x="150" y="710" width="300" height="160" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_140xbmr_di" bpmnElement="Event_1tf3bl3">
-        <dc:Bounds x="392" y="762" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="692" y="305" width="37" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_0zq3pf8_di" bpmnElement="Event_0amyfk7">
-        <dc:Bounds x="172" y="762" width="36" height="36" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1e7drh5_di" bpmnElement="Event_0zi96uw">
         <dc:Bounds x="312" y="399" width="36" height="36" />
